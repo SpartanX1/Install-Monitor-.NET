@@ -4,7 +4,8 @@ Install-Monitor lets you compare registry values and directories after installat
 It is completely developed in .net and relies on comparing old and new registry dumps.
 
 How to Build:
-Open the solution file and build in Visual Studio
+1) Open the solution file and build in Visual Studio
+2) Run from exe! 
 
 How to Use: 
 1) Choose the registry key(s) to watch
