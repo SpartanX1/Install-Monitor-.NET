@@ -1,0 +1,52 @@
+﻿<Window x:Class="InstallMonitor.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:InstallMonitor"
+        mc:Ignorable="d"
+        Title="Install Monitor v1.0" Height="420.4" Width="410"
+        ResizeMode="NoResize"
+        DataContext="{StaticResource ViewModel}"
+        Closed="Window_Closed"
+        >
+
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <Menu>
+                <MenuItem>
+                    <MenuItem.Header>Info</MenuItem.Header>
+                    <MenuItem Click="MenuItem_Click">
+                        <MenuItem.Header>
+                            About
+                        </MenuItem.Header>
+                    </MenuItem>
+                </MenuItem>
+            </Menu>
+            <StackPanel Margin="20,5,20,20">
+                <TextBlock>Choose Registry Key(s)</TextBlock>
+                <StackPanel Margin="0,5,0,0">
+                    <CheckBox IsChecked="{Binding HKEY_CLASSES_ROOT}">HKEY__CLASSES__ROOT</CheckBox>
+                        <CheckBox IsChecked="{Binding HKEY_CURRENT_USER}">HKEY__CURRENT__USER</CheckBox>
+                        <CheckBox IsChecked="{Binding HKEY_LOCAL_MACHINE}">HKEY__LOCAL__MACHINE</CheckBox>
+                        <CheckBox IsChecked="{Binding HKEY_USERS}">HKEY__USERS</CheckBox>
+                        <CheckBox IsChecked="{Binding HKEY_CURRENT_CONFIG}">HKEY__CURRENT__CONFIG</CheckBox>
+                    </StackPanel>
+                </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <StackPanel Margin="20,0,0,0" HorizontalAlignment="Left">
+                    <TextBlock>Choose a Drive to watch</TextBlock>
+                    <ComboBox SelectedIndex="0" Margin="0,5,0,0" ItemsSource="{Binding Drives}" SelectedItem="{Binding SelectedDrive}" Width="128"/>
+                </StackPanel>
+                <Button IsEnabled="{Binding IsFileMonitorBtnEnabled}" Margin="20,20,0,0" Content="Start File Monitor" Width="115" Height="22" Command="{Binding FileMonitorCommand}" />
+            </StackPanel>
+            <Button IsEnabled="{Binding IsRegSnapBtnEnabled}" Command="{Binding TakeRegistrySnapshotCommand}" Margin="20,30,20,0" Height="61">
+                    Create Registry Snapshot
+                </Button>
+                <Label Margin="20,0,20,0" Height="26" Content="{Binding Info}" HorizontalContentAlignment="Center"></Label>
+            <Button IsEnabled="{Binding IsCompBtnEnabled}" Command="{Binding CompareCommand}" Margin="20,0,20,0" Height="61">
+                Compare
+            </Button>
+        </StackPanel>
+    </Grid>
+</Window>

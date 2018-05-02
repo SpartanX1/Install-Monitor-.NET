@@ -1,0 +1,24 @@
+﻿<Window x:Class="InstallMonitor.About"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:InstallMonitor"
+        mc:Ignorable="d"
+        Title="About" Height="200" Width="300" ResizeMode="NoResize">
+    <Grid>
+        <StackPanel Margin="10" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock>
+           FileMenuExtender v1.0
+            </TextBlock>
+            <TextBlock Margin="0,10,0,0">
+           Copyright 2018  Abhijoy Basak
+            </TextBlock>
+            <TextBlock>
+                <Hyperlink NavigateUri="https://github.com/SpartanX1/Install-Monitor-.NET" RequestNavigate="Hyperlink_RequestNavigate">>
+                    Github
+                </Hyperlink>
+            </TextBlock>
+        </StackPanel>
+    </Grid>
+</Window>

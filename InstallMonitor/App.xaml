@@ -1,0 +1,9 @@
+﻿<Application x:Class="InstallMonitor.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:InstallMonitor"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <local:ViewModel x:Key="ViewModel" ></local:ViewModel>
+    </Application.Resources>
+</Application>
