@@ -3,6 +3,7 @@ Install-Monitor lets you compare registry values and directories after installat
 
 It is completely developed in .net and relies on comparing old and new registry dumps.
 
+
 ![alt text](Capture.PNG "Screenshot")
 
 ## How to Build:
