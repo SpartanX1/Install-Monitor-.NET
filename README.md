@@ -1,8 +1,7 @@
-# Install-Monitor-.NET
+# Install-Monitor-.NET 
 Install-Monitor lets you compare registry values and directories after installation of any application 
 
-It is completely developed in .net
-It relies on comparing old and new registry dumps.
+It is completely developed in .net and relies on comparing old and new registry dumps.
 
 How to Build:
 Open the solution file and build in Visual Studio
