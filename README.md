@@ -12,3 +12,6 @@ How to Use:
 3) Optional : Start file monitor to watch directories
 4) Install your application
 5) Click Compare! 
+
+Contributions:
+Contributors are welcome! :)
